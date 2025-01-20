@@ -1,6 +1,8 @@
-const { stdin, stdout } = process;
+const { stdin, stdout, stderr } = process;
 const fs = require('fs');
-const outputStream = fs.createWriteStream('document.txt', 'utf-8');
+const path = require('path');
+const pathJoin = path.join(__dirname, 'document.txt');
+const outputStream = fs.createWriteStream(pathJoin, 'utf-8');
 
 stdout.write('Hello!:) Write your text, please.\n');
 
